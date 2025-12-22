@@ -1,14 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './core/header/header';
+import { FooterComponent } from './core/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, CommonModule],
+  imports: [RouterOutlet, CommonModule, HeaderComponent, FooterComponent],
   template: `
-    <b>Hello World</b>
-    <router-outlet />
+    <app-header></app-header>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
   `,
-  styles: []
+  styles: [`
+    :host {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .main-content {
+      flex: 1;
+      padding: 20px 0;
+    }
+  `]
 })
-export class App{}
+export class App implements OnInit {
+  ngOnInit() {
+    // Any init logic
+  }
+}

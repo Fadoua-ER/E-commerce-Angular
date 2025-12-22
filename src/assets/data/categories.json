@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Communication & Computing",
+    "description": "Smartphones, laptops, tablets, and computing devices"
+  },
+  {
+    "id": 2,
+    "name": "Entertainment & Audio",
+    "description": "TVs, headphones, speakers, and gaming consoles"
+  },
+  {
+    "id": 3,
+    "name": "Photography & Video",
+    "description": "Cameras, drones, and video equipment"
+  },
+  {
+    "id": 4,
+    "name": "Home & Appliances",
+    "description": "Home appliances and electronic devices"
+  },
+  {
+    "id": 5,
+    "name": "Components & Accessories",
+    "description": "Electronic components, cables, and accessories"
+  },
+  {
+    "id": 6,
+    "name": "Wearable Technology",
+    "description": "Smartwatches, fitness trackers, and wearable devices"
+  },
+  {
+    "id": 7,
+    "name": "Gaming & VR",
+    "description": "Gaming consoles, VR headsets, and gaming accessories"
+  },
+  {
+    "id": 8,
+    "name": "Smart Home",
+    "description": "Smart home devices and IoT products"
+  }
+]

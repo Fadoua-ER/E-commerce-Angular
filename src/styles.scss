@@ -1,1 +1,347 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== USER INTERFACE THEME ===== */
+.user-theme {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.user-theme .card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin: 16px 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.user-theme .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.user-theme .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.user-theme .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.user-theme .btn-secondary {
+  background: #f8f9fa;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-theme .btn-secondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ===== ADMIN INTERFACE THEME ===== */
+.admin-theme {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.admin-theme .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+  padding: 24px;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.admin-theme .sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.admin-theme .sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  color: #b0b0b0;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.admin-theme .sidebar nav a:hover,
+.admin-theme .sidebar nav a.active {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  transform: translateX(4px);
+}
+
+.admin-theme .sidebar nav a .material-icons {
+  font-size: 20px;
+}
+
+.admin-theme .main-content {
+  margin-left: 280px;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+.admin-theme .card {
+  background: #2d2d2d;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  margin: 16px 0;
+  border: 1px solid #404040;
+}
+
+.admin-theme .btn-primary {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.admin-theme .btn-primary:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.admin-theme .btn-danger {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.admin-theme .btn-danger:hover {
+  background: #c53030;
+  transform: translateY(-1px);
+}
+
+.admin-theme table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #2d2d2d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-theme th,
+.admin-theme td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #404040;
+}
+
+.admin-theme th {
+  background: #1a1a1a;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.admin-theme tr:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.admin-theme .stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 24px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+
+.admin-theme .stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* ===== SHARED UTILITIES ===== */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+h1, h2, h3, h4 {
+  color: inherit;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.material-icons,
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .admin-theme .sidebar {
+    width: 240px;
+  }
+  .admin-theme .main-content {
+    margin-left: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-theme .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 16px;
+  }
+  .admin-theme .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+  .admin-theme .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .admin-theme .sidebar nav a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .app-container {
+    padding: 16px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .user-theme .card,
+  .admin-theme .card {
+    padding: 16px;
+  }
+}

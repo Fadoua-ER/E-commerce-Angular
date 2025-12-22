@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Admin User",
+    "email": "admin@techstore.ma",
+    "password": "admin123",
+    "role": "ADMIN"
+  },
+  {
+    "id": 2,
+    "name": "Ahmed Bennani",
+    "email": "ahmed.bennani@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 3,
+    "name": "Fatima Alaoui",
+    "email": "fatima.alaoui@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 4,
+    "name": "Youssef Tazi",
+    "email": "youssef.tazi@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 5,
+    "name": "Amina El Fassi",
+    "email": "amina.elfassi@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 6,
+    "name": "Karim Bouazza",
+    "email": "karim.bouazza@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 7,
+    "name": "Leila Mansouri",
+    "email": "leila.mansouri@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 8,
+    "name": "Omar Chraibi",
+    "email": "omar.chraibi@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 9,
+    "name": "Nadia Benjelloun",
+    "email": "nadia.benjelloun@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 10,
+    "name": "Hassan El Glaoui",
+    "email": "hassan.elglaoui@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 11,
+    "name": "Sara Alaoui",
+    "email": "sara.alaoui@email.com",
+    "password": "user123",
+    "role": "USER"
+  },
+  {
+    "id": 12,
+    "name": "Mehdi Tazi",
+    "email": "mehdi.tazi@email.com",
+    "password": "user123",
+    "role": "USER"
+  }
+]
