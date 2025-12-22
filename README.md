@@ -63,7 +63,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Overview
 
-This is a **frontend-only e-commerce application** built with **Angular v21**.
+This is a **frontend-only e-commerce application** built with **Angular v20**.
 It features **user and admin interfaces**, fully **responsive design**, and modern **UX/UI**. The app is designed as a **static website**.
 
 
@@ -101,7 +101,7 @@ It features **user and admin interfaces**, fully **responsive design**, and mode
 
 ## Technologies Used
 
-* **Angular 21** (Standalone Components)
+* **Angular 20** (Standalone Components)
 * **TypeScript**
 * **RxJS** for reactive state management
 * **localStorage** for data persistence
