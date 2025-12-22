@@ -64,7 +64,7 @@ For more information on using the Angular CLI, including detailed command refere
 ## Overview
 
 This is a **frontend-only e-commerce application** built with **Angular v21**.
-It features **user and admin interfaces**, fully **responsive design**, and modern **UX/UI**. The app is designed as a **static website**, with all data loaded from JSON files and persisted in `localStorage`.
+It features **user and admin interfaces**, fully **responsive design**, and modern **UX/UI**. The app is designed as a **static website**.
 
 
 ## Features
