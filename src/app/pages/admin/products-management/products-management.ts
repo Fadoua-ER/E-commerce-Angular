@@ -122,7 +122,8 @@ import { Category } from '../../../models/category';
       color: white;
       padding: 20px 0;
       position: fixed;
-      height: 100vh;
+      top: var(--header-height, 72px);
+      bottom: var(--footer-height, 80px);
       overflow-y: auto;
     }
 
@@ -169,6 +170,7 @@ import { Category } from '../../../models/category';
       flex: 1;
       margin-left: 250px;
       padding: 30px;
+      min-height: calc(100vh - var(--header-height, 72px) - var(--footer-height, 80px));
     }
 
     .page-header {

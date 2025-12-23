@@ -116,9 +116,6 @@ src/app
 ├── app.config.ts
 ├── app.routes.ts
 ├── app.ts
-├── assets/
-│   ├── data/ (JSON files for products, users, orders, categories, reviews)
-│   └── uploads/ (images for products and avatars)
 ├── core/ (header, footer, interceptors)
 ├── guards/ (AuthGuard, AdminGuard, GuestGuard)
 ├── models/ (User, Product, Category, Order, CartItem, Review)
@@ -130,6 +127,9 @@ src/app
 │   ├── unauthorized/
 │   └── loading/
 ├── shared/ (cards, pagination, search-bar, filter-sidebar, modal, spinner, toast-notification)
+src/assets/
+│   ├── data/ (JSON files for products, users, orders, categories, reviews)
+│   └── uploads/ (images for products and avatars)
 ```
 
 ## How It Works

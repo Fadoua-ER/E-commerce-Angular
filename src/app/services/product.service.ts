@@ -18,12 +18,17 @@ export class ProductService {
     const stored = localStorage.getItem('products');
     if (stored) {
       this.productsSubject.next(JSON.parse(stored));
-    } else {
-      this.http.get<Product[]>('assets/data/products.json').subscribe(products => {
-        this.productsSubject.next(products);
-        localStorage.setItem('products', JSON.stringify(products));
-      });
+      return;
     }
+
+    const defaultProducts: Product[] = [
+      { id: 1, name: 'Classic Sneakers', description: 'Comfortable everyday sneakers', price: 59.99, categoryId: 1, imageUrl: '/assets/img/product1.jpg', stock: 120, rating: 4.5, reviewsCount: 24 },
+      { id: 2, name: 'Leather Wallet', description: 'Genuine leather bifold wallet', price: 34.99, categoryId: 2, imageUrl: '/assets/img/product2.jpg', stock: 80, rating: 4.2, reviewsCount: 12 },
+      { id: 3, name: 'Wireless Headphones', description: 'Noise cancelling over-ear headphones', price: 129.99, categoryId: 3, imageUrl: '/assets/img/product3.jpg', stock: 45, rating: 4.7, reviewsCount: 58 }
+    ];
+
+    this.productsSubject.next(defaultProducts);
+    this.saveProducts(defaultProducts);
   }
 
   private saveProducts(products: Product[]): void {

@@ -5,6 +5,7 @@ import { HeaderComponent } from './core/header/header';
 import { FooterComponent } from './core/footer/footer';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, HeaderComponent, FooterComponent],
   template: `
@@ -16,13 +17,18 @@ import { FooterComponent } from './core/footer/footer';
   `,
   styles: [`
     :host {
-      display: flex;
-      flex-direction: column;
+      --header-height: 72px;
+      --footer-height: 80px;
+      display: block;
       min-height: 100vh;
+      box-sizing: border-box;
     }
     .main-content {
-      flex: 1;
-      padding: 20px 0;
+      display: block;
+      min-height: calc(100vh - var(--header-height) - var(--footer-height));
+      // padding: 24px 0;
+      padding-top: calc(var(--header-height) + 16px);
+      padding-bottom: calc(var(--footer-height) + 16px);
     }
   `]
 })

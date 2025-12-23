@@ -15,10 +15,19 @@ export class UserService {
   }
 
   private loadUsers(): void {
-    this.http.get<User[]>('assets/data/users.json').subscribe(users => {
-      const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
-      this.usersSubject.next([...users, ...storedUsers]);
-    });
+    const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+    if (storedUsers && storedUsers.length) {
+      this.usersSubject.next(storedUsers);
+      return;
+    }
+
+    const defaultUsers: User[] = [
+      { id: 1, name: 'Admin User', email: 'admin@example.com', password: 'admin123', role: 'ADMIN' },
+      { id: 2, name: 'John Doe', email: 'user@example.com', password: 'user123', role: 'USER' }
+    ];
+
+    this.usersSubject.next(defaultUsers);
+    localStorage.setItem('users', JSON.stringify(defaultUsers));
   }
 
   getUsers(): Observable<User[]> {

@@ -18,12 +18,17 @@ export class CategoryService {
     const stored = localStorage.getItem('categories');
     if (stored) {
       this.categoriesSubject.next(JSON.parse(stored));
-    } else {
-      this.http.get<Category[]>('assets/data/categories.json').subscribe(categories => {
-        this.categoriesSubject.next(categories);
-        localStorage.setItem('categories', JSON.stringify(categories));
-      });
+      return;
     }
+
+    const defaultCategories: Category[] = [
+      { id: 1, name: 'Footwear', description: 'Shoes and sneakers' },
+      { id: 2, name: 'Accessories', description: 'Wallets, belts, and more' },
+      { id: 3, name: 'Electronics', description: 'Audio, gadgets and accessories' }
+    ];
+
+    this.categoriesSubject.next(defaultCategories);
+    this.saveCategories(defaultCategories);
   }
 
   private saveCategories(categories: Category[]): void {

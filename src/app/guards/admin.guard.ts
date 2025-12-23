@@ -9,10 +9,17 @@ export class AdminGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean {
-    if (this.authService.isAdmin()) {
-      return true;
+    // If user is authenticated and an admin -> allow
+    if (this.authService.isAuthenticated()) {
+      if (this.authService.isAdmin()) {
+        return true;
+      }
+      // Authenticated but not admin -> show unauthorized
+      this.router.navigate(['/unauthorized']);
+      return false;
     }
-    this.router.navigate(['/unauthorized']);
+    // Not authenticated -> redirect to admin login
+    this.router.navigate(['/admin-login']);
     return false;
   }
 }
