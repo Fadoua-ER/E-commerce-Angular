@@ -26,7 +26,7 @@ import { FooterComponent } from './core/footer/footer';
     .main-content {
       display: block;
       min-height: calc(100vh - var(--header-height) - var(--footer-height));
-      // padding: 24px 0;
+      padding: 24px 0;
       padding-top: calc(var(--header-height) + 16px);
       padding-bottom: calc(var(--footer-height) + 16px);
     }

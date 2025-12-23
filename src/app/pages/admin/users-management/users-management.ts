@@ -159,7 +159,7 @@ import { User } from '../../../models/user';
     .main-content {
       flex: 1;
       margin-left: 250px;
-      padding: 30px;
+      padding: 0px;
       min-height: calc(100vh - var(--header-height, 72px) - var(--footer-height, 80px));
     }
 
